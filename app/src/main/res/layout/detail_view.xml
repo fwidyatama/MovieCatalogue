@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    tools:context=".view.DetailView">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerImage"
+        android:layout_width="match_parent"
+        android:elevation="25sp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/posterMovie"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="fitXY"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+    <RatingBar
+        android:id="@+id/starIcon"
+        style="?android:attr/ratingBarStyleSmall"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleMovie"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="#FFFFFF"
+        android:isIndicator="true"
+        android:numStars="1"
+        android:outlineProvider="none"
+        android:progressBackgroundTint="#FFEB3B"
+        android:progressTint="#FFEB3B"
+        android:rating="1"
+        android:secondaryProgressTint="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/durationMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_below="@id/ratingScore"
+        android:layout_marginTop="8dp"
+        android:text="duration"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_below="@id/durationMovie"
+        android:layout_marginTop="8dp"
+        android:text="Release Date" />
+
+    <TextView
+        android:id="@+id/titleMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/containerImage"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Title"
+        android:textColor="#464545"
+        android:textSize="37sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ratingScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleMovie"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/starIcon"
+        android:text="Rating" />
+
+    <TextView
+        android:id="@+id/budgetMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/releaseDate"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="12dp"
+        android:textSize="18sp"
+        android:text="Budget" />
+
+    <TextView
+        android:id="@+id/overviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_below="@id/budgetMovie"
+        android:textSize="18sp"
+        android:justificationMode="inter_word"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:text="Overview:" />
+
+    <TextView
+        android:id="@+id/overViewMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_below="@id/overviewTitle"
+        android:textSize="18sp"
+        android:justificationMode="inter_word"
+        android:layout_marginTop="8dp"
+        android:text="Overview" />
+
+
+</RelativeLayout>
