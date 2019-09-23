@@ -50,10 +50,9 @@ public class TvShowFragment extends Fragment {
         recyclerView.setAdapter(movieAdapter);
 
         recyclerView = view.findViewById(R.id.rv_tvShow);
-        Log.d("BACA", String.valueOf(recyclerView));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         TvAdapter tvAdapter = new TvAdapter(tvShowArrayList);
-        recyclerView.setAdapter(movieAdapter);
+        recyclerView.setAdapter(tvAdapter);
 
         return view;
     }
