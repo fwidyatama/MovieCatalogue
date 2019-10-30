@@ -1,0 +1,21 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+      <string name="app_name">Katalog Film</string>
+    <string name="title_tvShow">Serial TV</string>
+    <string name="title_movies">Film</string>
+    <string name="read_more">Baca Selebihnya</string>
+    <string name="title">Judul :</string>
+    <string name="release_date">Rilis: %1$s</string>
+
+    <string name="change_language">Ganti Pengaturan Bahasa</string>
+    <string name="title_activity_settings">Pengaturan</string>
+    <string name="messages_header">Pengaturan bahasa</string>
+    <string name="language">language</string>
+    <string name="changeLanguage">Klik untuk ganti bahasa</string>
+    <string name="languageTitle">Bahasa</string>
+    <string name="overview">Rangkuman</string>
+    <string name="background">background</string>
+    <string name="rating">Nilai</string>
+    <string name="release">Rilis</string>
+    <string name="poster">Poster</string>
+</resources>

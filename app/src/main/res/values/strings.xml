@@ -1,0 +1,27 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Movie Catalogue</string>
+    <string name="title_tvShow">TV Show</string>
+    <string name="title_movies">Movies</string>
+    <string name="read_more">Read More</string>
+    <string name="release_date">Release: %1$s</string>
+    <string name="title">Title :</string>
+
+
+    <string name="change_language">Change Language Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Language Setting</string>
+    <string name="language">Language</string>
+    <string name="changeLanguage">Click for change language</string>
+    <string name="languageTitle">Language</string>
+    <string name="overview">Overview</string>
+    <string name="background">background</string>
+    <string name="rating">Rating</string>
+    <string name="release">Release</string>
+    <string name="poster">Poster</string>
+
+
+</resources>
+
