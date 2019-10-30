@@ -1,5 +1,5 @@
 # Movie Catalogue
-Submission for MADE (Menjadi Android Developer Expert) from Dicoding. 
+Submission untuk [MADE (Menjadi Android Developer Expert)](https://www.dicoding.com/academies/14) dari [Dicoding](https://www.dicoding.com). 
 
 ## Submission 1
 * [x] Menampilkan daftar film dengan menggunakan listview
