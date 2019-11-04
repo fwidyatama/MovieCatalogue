@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.moviecatalogue.view.SettingsActivity;
 import com.example.moviecatalogue.view.TvShowFragment;
 import com.example.moviecatalogue.view.MoviesFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

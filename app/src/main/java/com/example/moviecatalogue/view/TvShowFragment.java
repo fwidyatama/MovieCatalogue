@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,7 +26,6 @@ import java.util.Objects;
 public class TvShowFragment extends Fragment {
     private RecyclerView recyclerView;
     private TvAdapter tvAdapter;
-    private TvViewModel tvViewModel;
     private ArrayList<Item> itemListArrayList = new ArrayList<>();
 
     @Override
@@ -40,8 +39,8 @@ public class TvShowFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         recyclerView = view.findViewById(R.id.rv_tvShow);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        tvViewModel = new ViewModelProvider(Objects.requireNonNull(getActivity()), new ViewModelProvider.NewInstanceFactory()).get(TvViewModel.class);
-        tvViewModel.getMovies().observe(getActivity(), new Observer<ItemResponse>() {
+        TvViewModel tvViewModel = ViewModelProviders.of(Objects.requireNonNull(getActivity())).get(TvViewModel.class);
+        tvViewModel.getTvItem().observe(getActivity(), new Observer<ItemResponse>() {
             @Override
             public void onChanged(ItemResponse itemResponse) {
                 List<Item> itemLists = itemResponse.getResult();

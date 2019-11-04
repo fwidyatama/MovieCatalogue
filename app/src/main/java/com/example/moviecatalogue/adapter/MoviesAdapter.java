@@ -25,6 +25,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.DataHolder
     public MoviesAdapter(Context context, ArrayList<Item> movieArrayList) {
         this.context = context;
         this.movieArrayList = movieArrayList;
+        notifyDataSetChanged();
     }
 
     @NonNull

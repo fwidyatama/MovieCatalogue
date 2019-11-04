@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,11 +25,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-
 public class MoviesFragment extends Fragment {
     private RecyclerView recyclerView;
     private MoviesAdapter movieAdapter;
-    private MovieViewModel movieViewModel;
     private ArrayList<Item> itemListArrayList = new ArrayList<>();
     private ProgressBar progressBar;
 
@@ -45,11 +43,10 @@ public class MoviesFragment extends Fragment {
         progressBar = view.findViewById(R.id.progressBar);
         recyclerView = view.findViewById(R.id.rv_movies);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        movieViewModel = new ViewModelProvider(Objects.requireNonNull(getActivity()), new ViewModelProvider.NewInstanceFactory()).get(MovieViewModel.class);
-        movieViewModel.getMovies().observe(getActivity(), new Observer<ItemResponse>() {
+        MovieViewModel movieViewModel = ViewModelProviders.of(Objects.requireNonNull(getActivity())).get(MovieViewModel.class);
+        movieViewModel.getMovieItem().observe(getActivity(), new Observer<ItemResponse>() {
             @Override
             public void onChanged(ItemResponse itemResponse) {
-
                 List<Item> itemLists = itemResponse.getResult();
                 itemListArrayList.addAll(itemLists);
                 movieAdapter = new MoviesAdapter(getActivity(), itemListArrayList);
